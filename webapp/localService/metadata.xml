@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema Namespace="ODataDemo"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2007/05/edm">
+            <EntityType Name="Product">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" Nullable="false" />
+                <Property Name="PackagePrice" Type="Edm.Decimal" Nullable="true" />
+                <Property Name="Producer" Type="Edm.String" Nullable="false" />
+                <Property Name="PackageMeasure" Type="Edm.Int32" Nullable="false" />
+                <Property Name="PackageMeasureUnit" Type="Edm.String" Nullable="false" />
+                <Property Name="PartitionPrice" Type="Edm.Decimal" Nullable="true" />
+                <Property Name="PartitionMeasure" Type="Edm.Int32" Nullable="true" />
+                <Property Name="PartitionMeasureUnit" Type="Edm.String" Nullable="true" />
+                <Property Name="Retailer" Type="Edm.String" Nullable="false" />
+                <Property Name="Category" Type="Edm.String" Nullable="false" />
+            </EntityType>
+        </Schema>
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ODataDemoContainer">
+            <EntityContainer
+                xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Name="ProductEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true">
+                <EntitySet Name="Products" EntityType="ODataDemo.Product"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

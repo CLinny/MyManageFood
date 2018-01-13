@@ -1,0 +1,31 @@
+[{
+	"ID": 1,
+	"Name": "Milch",
+	"PackagePrice": 0.69,
+	"Producer": "Müller",
+	"PackageMeasure": 1,
+	"PackageMeasureUnit": "L",
+	"Retailer": "Edeka",
+	"Category": "Milchprodukte"
+}, {
+	"ID": 2,
+	"Name": "Käse",
+	"PackagePrice": 2.99,
+	"Producer": "Molkerei",
+	"PackageMeasure": 250,
+	"PackageMeasureUnit": "g",
+	"PartitionMeasure": 100,
+	"PartitionMeasureUnit": "g",
+	"Retailer": "Rewe",
+	"Category": "Milchprodukte",
+	"PartitionPrice": 1.19
+}, {
+	"ID": 3,
+	"Name": "Wurst",
+	"Producer": "Metzger",
+	"PartitionPrice": 1.3,
+	"PartitionMeasure": 100,
+	"PartitionMeasureUnit": "g",
+	"Retailer": "Aldi",
+	"Category": "Fleisch & Wurst"
+}]
