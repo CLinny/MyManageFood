@@ -28,4 +28,16 @@
 	"PartitionMeasureUnit": "g",
 	"Retailer": "Aldi",
 	"Category": "Fleisch & Wurst"
+}, {
+	"ID": 4,
+	"Name": "Brot",
+	"PackagePrice": 1.2,
+	"Producer": "Bäcker",
+	"PackageMeasure": 1,
+	"PackageMeasureUnit": "kg",
+	"PartitionPrice": 0.12,
+	"PartitionMeasure": 100,
+	"PartitionMeasureUnit": "g",
+	"Retailer": "Edeka",
+	"Category": "Teigwaren"
 }]

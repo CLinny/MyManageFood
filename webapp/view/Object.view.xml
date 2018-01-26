@@ -19,16 +19,67 @@
 		<semantic:headerContent>
 			<Title text="{Producer}" />
 		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<Title text="{Retailer}" />
+		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<Title text="{Category}" />
+		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<ObjectNumber
+				number="{PackageMeasure}"
+				unit="{
+					path: 'PackageMeasureUnit'
+				}"
+				
+			/>
+		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<Text text="{i18n>packagePriceTitle}" />
+		</semantic:headerContent>
 
 		<semantic:headerContent>
 			<ObjectNumber
-				number="{
+				number="{PackagePrice}"
+				unit="{
 					parts: [{path: 'PackagePrice'}, {path: 'view>/PackageWeight'}],
 					formatter: '.formatter.numberUnit'
 				}"
-				numberUnit="{view>/PackageWeight}"
+				
 			/>
 		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<Text text="{i18n>partitionPriceTitle}" />
+		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<ObjectNumber
+				number="{PartitionMeasure}"
+				unit="{
+					parts: [{path: 'PartitionMeasure'}, {path: 'PartitionMeasureUnit'}],
+					formatter: '.formatter.numberUnit'
+				}"
+				
+			/>
+		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<ObjectNumber
+				unit="{
+					path: 'view>/PartitionWeight'
+				}"
+				number="{PartitionPrice}"
+				
+			/>
+		</semantic:headerContent>
+		
+		
+
 
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>

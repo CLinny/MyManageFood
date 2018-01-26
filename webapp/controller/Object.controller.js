@@ -31,6 +31,7 @@ sap.ui.define([
 				var iOriginalBusyDelay,
 					oViewModel = new JSONModel({
 						PackageWeight : "Euro",
+						PartitionWeight : "Euro",
 						busy : true,
 						delay : 0
 					});

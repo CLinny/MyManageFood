@@ -20,10 +20,14 @@
 				width="auto"
 				items="{
 					path: '/Products',
-					sorter: {
+					sorter: [{
+						path: 'Retailer',
+						group: true
+					},
+					{
 						path: 'Name',
 						descending: false
-					}
+					}]
 				}"
 				noDataText="{worklistView>/tableNoDataText}"
 				busyIndicatorDelay="{worklistView>/tableBusyDelay}"
@@ -51,6 +55,9 @@
 					<Column id="producerColumn">
 						<Text text="{i18n>tableProducerColumnTitle}" id="producerColumnTitle"/>
 					</Column>
+					<Column id="packageMeasureColumn" hAlign="End">
+						<Text text="{i18n>tablePackageMeasureColumnTitle}" id="packageMeasureColumnTitle"/>
+					</Column>
 					<Column id="unitNumberColumn" hAlign="End">
 						<Text text="{i18n>tableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
 					</Column>
@@ -65,6 +72,12 @@
 								title="{Name}"/>
 							<Text
 								text="{Producer}"/>
+							<ObjectNumber
+								number="{PackageMeasure}"
+								unit="{
+									parts: [{path: 'PackageMeasure'}, {path: 'PackageMeasureUnit'}],
+									formatter: '.formatter.numberUnit'
+								}"></ObjectNumber>
 							<ObjectNumber
 								number="{PackagePrice}"
 								unit="{
