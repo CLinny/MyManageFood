@@ -15,6 +15,33 @@ sap.ui.define([
 					return "";
 				}
 				return sCurrency;
+			},
+			
+			detailNumberUnit : function (sValue, sCurrency) {
+				if(!sValue){
+					return "";
+				}
+				return sValue + " " + sCurrency;
+			},
+			
+			packageFormatter : function (iPartitionMeasure, sPartitionMeasureUnit, iPartitionPrice, sPartitionWeight) {
+				//iPartitionMeasure = 100 
+				//sPartitionMeasureUnit = "g"
+				//iPartitionPrice = 1.99
+				//sPartittionWeight = "EUR"
+				
+				//100g / 1.99 Euro
+				//1.99 Euro
+				
+				if(iPartitionPrice){
+					var sConcatPrice = iPartitionPrice + " " + sPartitionWeight;
+					if(iPartitionMeasure){
+						return iPartitionMeasure + sPartitionMeasureUnit + " / " + sConcatPrice;
+					}
+					return sConcatPrice;
+				}
+				return "";
+				
 			}
 
 		};
